@@ -1,12 +1,12 @@
 {
-  "name": "gulp-start",
+  "name": "candle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vadym Prokopchuk",
+  "author": "Iryna Panchenko",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",

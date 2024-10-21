@@ -77,7 +77,11 @@ function watching() {
 }
 
 function deploy() {
-  return src("dist/**/*").pipe(ghPages());
+  return src("dist/**/*").pipe(
+    ghPages({
+      add: true,
+    })
+  );
 }
 
 exports.styles = styles;
