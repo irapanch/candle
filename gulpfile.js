@@ -6,8 +6,9 @@ const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
-const del = require("del");
+// const del = require("del");
 const ghPages = require("gulp-gh-pages");
+const clean = require("gulp-clean");
 
 function browsersync() {
   browserSync.init({
@@ -18,7 +19,7 @@ function browsersync() {
 }
 
 function cleanDist() {
-  return del("dist");
+  return src("dist").pipe(clean());
 }
 
 function images() {
@@ -58,7 +59,7 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-function build() {
+function building() {
   return src(
     [
       "app/css/style.min.css",
@@ -92,5 +93,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.deploy = deploy;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, building);
 exports.default = parallel(styles, scripts, browsersync, watching);
