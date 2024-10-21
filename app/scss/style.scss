@@ -1,7 +1,5 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
-
-
+@use "vars" as *;
+@use "fonts" as *;
+@use "reset" as *;
+@use "libs" as *;
+@use "global" as *;
