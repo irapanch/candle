@@ -1,4 +1,5 @@
 {
+  "homepage": "https://irapanch.github.io/candle/",
   "name": "candle",
   "version": "1.0.0",
   "description": "",
@@ -19,7 +20,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
-    "sass": "^1.58.0"
+    "sass": "^1.58.0",
+    "gh-pages": "^6.1.1"
   },
   "dependencies": {
     "gift": "^0.10.2"
