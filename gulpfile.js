@@ -93,5 +93,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.deploy = deploy;
 
-exports.build = series(cleanDist, images, building);
 exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, images, building);
